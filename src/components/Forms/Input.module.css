@@ -1,0 +1,169 @@
+/* SERACH INPUT STYLES */
+form{
+    position: relative;
+
+}
+.container {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #d3d3d3;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: hsl(0, 0%, 52%);
+  width: 150%;
+  /* transition: all 0.2s ease-in; */
+}
+.dark{
+  background-color:  hsl(209, 23%, 22%);
+  box-shadow: 0 4px 18px -12px hsl(207, 26%, 17%);
+}
+
+.container input {
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  color: hsl(0, 0%, 52%);
+  font-size: 16px;
+  margin-left: 1rem;
+  width: 100%;
+  background-color: transparent;
+}
+.container.dark input{
+  color:white;
+  background-color: transparent;
+}
+.container.dark i {
+  color:white;
+}
+.container input:focus {
+  outline: none;
+}
+.container input::placeholder{
+  color: hsl(0, 0%, 52%);
+  font-weight: 600;
+}
+.container.dark input::placeholder{
+  color: white;
+}
+
+/* FILTER INPUT STYLES */
+
+.filter {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #d3d3d3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #08030F;
+  cursor: pointer;
+  /* transition: all 0.1s ease-in; */
+}
+.dark{
+  background-color:  hsl(209, 23%, 22%);
+  box-shadow: 0 4px 18px -12px hsl(207, 26%, 17%);
+}
+.filter p{
+       font-weight: 600;
+       font-size: 16px;
+       margin-right: 2rem;
+}
+.filter.dark p{
+  color:white
+}
+.filter.dark i{
+  color: white;
+}
+.dropdown{
+  position: absolute;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 6px #d3d3d3;
+  padding: 1rem 1.5rem;
+  color: #08030F;
+  cursor: pointer;
+  width:100%;
+  margin-top: .5rem;
+  display: none;
+}
+
+.darkdown{
+ background-color: hsl(209, 23%, 22%);
+  box-shadow: 0 4px 18px -12px hsl(207, 26%, 17%);
+  color:white;
+
+}
+
+.show{
+  display: block;
+}
+
+.dropdown ul{
+  list-style: none;
+  font-weight: 600;
+}
+.dropdown ul li{
+  margin-top: .5rem;
+}
+
+
+@media (max-width: 570px) {
+  form{
+    width:100%;
+  }
+  .container {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.filter {
+ width:60%;
+}
+.dropdown{
+ 
+  width:60%;
+}
+}
+
+@media (width: 375px) {
+  .filter {
+ width:70%;
+}
+.dropdown{
+ 
+  width:70%;
+}
+}
+@media (width: 360px) {
+   .filter {
+ width:80%;
+}
+.dropdown{
+ 
+  width:80%;
+}
+  
+}
+@media (width: 320px) {
+   .filter {
+ width:90%;
+}
+.dropdown{
+ 
+  width:90%;
+}
+  
+}
+
+@media (width:1024px) {
+  .filter {
+ width:100%;
+}
+}
+
+@media (width:768px) {
+   .filter {
+ width:100%;
+}
+}

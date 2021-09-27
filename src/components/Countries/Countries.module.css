@@ -1,0 +1,30 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 4rem;
+  justify-items: stretch;
+  column-gap: 3.1rem;
+  row-gap: 4rem;
+  font-family: inherit;
+}
+
+@media (max-width: 570px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+  }
+  
+}
+
+@media (width:768px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+}
+@media (width:1024px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+  }
+}

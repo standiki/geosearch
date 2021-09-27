@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route, Redirect } from "react-router";
+import Header from "../src/components/Layout/Header";
+import Footer from "./components/UI/Footer";
+import Home from "../src/pages/Home";
+import Details from '../src/pages/Details'
+import NotFoundPage from "./pages/NotFoundPage";
+import {  useSelector } from "react-redux";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const darkMode = useSelector((state) => state.countrySlice.darkMode);
+
+
+  const bodyColor= darkMode ? 'body darkbody' : 'body'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={bodyColor}>
+      <Header />
+      <Switch>
+        <Route path="/" exact>
+          <Redirect to="/home" />
+        </Route>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route path="/details/:countryCode">
+          <Details />
+        </Route>
+        <Route path="*">
+          <NotFoundPage />
+        </Route>
+      </Switch>
+      <Footer/>
     </div>
   );
-}
+};
 
 export default App;
